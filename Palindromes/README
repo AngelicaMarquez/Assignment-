@@ -1,1 +1,17 @@
 
+2.6 Palindrome
+  I - Implement a function to check if a linked list is a palindrome. Palindrome, a word that is the same from front to baack and back to front.
+  D - Boolean value. True if palindrome. False if NOT palindrome.
+  E - r->o->t->a->t->o->r    --> true
+      a->b->b->a->   --> true
+      p->a->p->e->r   --> false
+      b->c->d->d->c->b -->true
+      A data structure that can be used to solve the problem is stack with the property of first in, last out. A property of palindromes is its symetrical
+      form. The first half of the word will reflect the second half. I populataed the stack half the length, then compared 
+      the rest of the linked list poping the values from the stack.
+  A -  k->a->y->a->k --> true
+        a   --> true
+       If the length is odd then ignore. If length is 1 return true.
+  L - I learned the importance of thinking about data stuctures while solving the problems. Reviewd the properties of stacks. 
+      
+      
