@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class threeInOne {
+	ArrayList<Integer> s = new ArrayList<Integer>();
+	int aLength=0;
+	int[] index;
+	int index0;
+	int index1;
+	int index2;
+	
+	public void setStacks(int n){
+		s = new ArrayList<Integer>(n);
+		index[0]=0;
+		index[1]=n/3;
+		index[2]=2*n/3;
+		
+	}
+	
+	public void push(int x, int numStack){
+		s.add(index[numStack], x);
+		index[numStack]++;
+		
+	}
+	public int pop(int numStack){
+		if(numStack>3)
+			return -1;
+		int pop = s.get(index[numStack]);
+		s.remove(index[numStack]);
+		index[numStack]--;
+		return pop;		
+	}
+	
+	public int peek(int numStack) {
+		int peek = s.get(index[numStack]);
+		return peek;
+	}
+	
+}
